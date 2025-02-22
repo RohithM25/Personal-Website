@@ -25,6 +25,10 @@
     }
 
     .links{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 100;  /* ensures links stay on top */
         vertical-align: middle;
         text-align: center;
         margin: 20px;
@@ -42,11 +46,17 @@
         color: rgb(255,255,255);
     }
 
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        gap: 50px;
+    }
+
     .section-headers {
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: static;
+        transform: none;
         font-size: 32px;
         color: white;
     }
@@ -56,17 +66,29 @@
     }
 
     #profilepic {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: static;
+        transform: none;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+
+    .bio-text {
+        max-width: 1200px;
+        text-align: center;
+        line-height: 1.6;
+        font-size: 24px;  /* increased from 18px */
+        color: white;
+        margin-top: 20px;
     }
 </style>
 <body>
-    <div class="links" style="position: fixed; top: 20px; right: 20px;">
-        <a class="home" href="https://rohithm25.github.io/Personal-Website/">
-            <i class="fas fa-home"></i> Home
-        </a>
+    <h1 style="text-align: center;"> This site is under construction! </h1>
+    
+    <div class="links">
         <a class="linkedin" href="https://www.linkedin.com/in/rohith-malangi-5aa27522b/" target="_blank">
             <i class="fab fa-linkedin"></i> LinkedIn
         </a>
@@ -75,15 +97,20 @@
         </a>
     </div>
     
-    <div class="section-headers">
-        <span>Professional</span>
-        <span>|</span>
-        <span>Personal</span>
-    </div>
-    
-    <img id="profilepic" src="Rohith Malangi.jpg" style="width:300px;height:400px;" alt="Rohith Malangi">
+    <div class="content-wrapper">
+        <h2>Rohith Malangi</h2>
+        <div class="section-headers">
+            <span><a href="index.html" style="color: white; text-decoration: underline;">Professional</a></span>
+            <span>|</span>
+            <span><a href="personal.html" style="color: white; text-decoration: none;">Personal</a></span>
+        </div>
 
-    <h1 style="text-align: center;"> This site is under construction! </h1>
+        <img id="profilepic" src="Professional Photo.jpg" style="width:360px;height:540px;" alt="Rohith Malangi">
+        <p class="bio-text">
+                    Welcome to my professional page. I'm a senior at Rutgers University and an aspiring software engineer. I am particularly interested in
+            creating solutions with technology to combat environmental problems. I am always learning new technologies and skills to stay relevant in the industry and increase efficiency.
+        </p>
+    </div>
 </body>
 
 </html>

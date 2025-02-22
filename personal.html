@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Kannada&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        background: linear-gradient(
+            180deg,
+            #0a0000 0%,
+            #470188 15%,
+            #470188 85%,
+            #0a0000 100%
+        );
+        color: white;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .links{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 100;  /* ensures links stay on top */
+        vertical-align: middle;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        color: rgb(255,255,255);
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        gap: 50px;
+    }
+
+    .section-headers {
+        position: static;
+        transform: none;
+        font-size: 32px;
+        color: white;
+    }
+    
+    .section-headers span {
+        margin: 0 20px;
+    }
+
+    #profilepic {
+        position: static;
+        transform: none;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 64px;
+        margin-bottom: 0;
+        font-family: 'Pinyon Script', cursive;
+    }
+
+    .kannada-name {
+        font-family: 'Tiro Kannada', serif;
+        font-size: 36px;
+        margin-top: -40px;
+        color: white;
+    }
+
+    .bio-text {
+        max-width: 1200px;  /* limits width for better readability */
+        text-align: center;
+        line-height: 1.6;  /* better line spacing */
+        font-size: 24px;
+        color: white;
+        margin-top: 20px;  /* space after Kannada name */
+    }
+</style>
+<body>
+    <h1>This site is under construction!</h1>
+
+    <div class="links">
+    </div>
+
+    <div class="content-wrapper">
+        <h2>Rohith Malangi</h2>
+        <div class="section-headers">
+            <span><a href="index.html" style="color: white; text-decoration: none;">Professional</a></span>
+            <span>|</span>
+            <span><a href="personal.html" style="color: white; text-decoration: underline;">Personal</a></span>
+        </div>
+
+        <img id="profilepic" src="Personal Photo.jpg" style="width:360px;height:540px;" alt="Rohith Malangi">
+        <div class="kannada-name">ರೋಹಿತ್ ಮಾಲಂಗಿ</div>
+        <p class="bio-text">
+                    Welcome to my personal page. Outside of my professional life, I have several passions and interests.
+        </p>
+    </div>
+
+</body>
+</html> 
