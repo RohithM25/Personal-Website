@@ -1,9 +1,6 @@
 <!-- Personal webpage
     Ombre style background colors
-    Should be red most of the time, but can be other colors too at low percentages
-    
-    To do:
-    1. Make profilepic size tied to a single variable
+
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -80,14 +77,47 @@
         max-width: 1200px;
         text-align: center;
         line-height: 1.6;
-        font-size: 24px;  /* increased from 18px */
-        color: white;
+        font-size: 24px;
         margin-top: 20px;
+        color: white;
+    }
+
+    .email-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        margin: 20px;
+    }
+
+    .email-text {
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .email-address {
+        display: none;
+        color: white;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .close-btn {
+        cursor: pointer;
+        margin-right: 5px;
     }
 </style>
 <body>
-    <h1 style="text-align: center;"> This site is under construction! </h1>
-    
+    <div class="email-container">
+        <div class="email-text" onclick="toggleEmail()">
+            <i class="fas fa-envelope"></i> Email
+        </div>
+        <div id="emailAddress" class="email-address">
+            <span class="close-btn" onclick="toggleEmail()">✕</span>
+            rohith.malangi@gmail.com
+        </div>
+    </div>
     <div class="links">
         <a class="linkedin" href="https://www.linkedin.com/in/rohith-malangi-5aa27522b/" target="_blank">
             <i class="fab fa-linkedin"></i> LinkedIn
@@ -108,9 +138,16 @@
         <img id="profilepic" src="Professional Photo.jpg" style="width:360px;height:540px;" alt="Rohith Malangi">
         <p class="bio-text">
                     Welcome to my professional page. I'm a senior at Rutgers University and an aspiring software engineer. I am particularly interested in
-            creating solutions with technology to combat environmental problems. I am always learning new technologies and skills to stay relevant in the industry and increase efficiency.
+            creating solutions with technology to combat environmental problems. I am always learning new technologies and skills to stay relevant in the industry and become a more efficient developer.
         </p>
     </div>
+
+    <script>
+        function toggleEmail() {
+            const emailDiv = document.getElementById('emailAddress');
+            emailDiv.style.display = emailDiv.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </body>
 
 </html>

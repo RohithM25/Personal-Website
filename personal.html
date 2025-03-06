@@ -36,11 +36,6 @@
         margin: 10px;
     }
 
-    h1 {
-        text-align: center;
-        color: rgb(255,255,255);
-    }
-
     .content-wrapper {
         display: flex;
         flex-direction: column;
@@ -84,16 +79,45 @@
         text-align: center;
         line-height: 1.6;  /* better line spacing */
         font-size: 24px;
-        color: white;
         margin-top: 20px;  /* space after Kannada name */
+    }
+
+    .email-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        margin: 20px;
+    }
+
+    .email-text {
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .email-address {
+        display: none;
+        color: white;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    .close-btn {
+        cursor: pointer;
+        margin-right: 5px;
     }
 </style>
 <body>
-    <h1>This site is under construction!</h1>
-
-    <div class="links">
+    <div class="email-container">
+        <div class="email-text" onclick="toggleEmail()">
+            <i class="fas fa-envelope"></i> Email
+        </div>
+        <div id="emailAddress" class="email-address">
+            <span class="close-btn" onclick="toggleEmail()">✕</span>
+            rohith.malangi@gmail.com
+        </div>
     </div>
-
     <div class="content-wrapper">
         <h2>Rohith Malangi</h2>
         <div class="section-headers">
@@ -105,9 +129,16 @@
         <img id="profilepic" src="Personal Photo.jpg" style="width:360px;height:540px;" alt="Rohith Malangi">
         <div class="kannada-name">ರೋಹಿತ್ ಮಾಲಂಗಿ</div>
         <p class="bio-text">
-                    Welcome to my personal page. Outside of my professional life, I have several passions and interests.
+                    Welcome to my personal page. Outside of my professional life, I have several passions and interests. 
+                    Some of my hobbies are bicycling, motorcycling, piano, and dance. I try to stay open-minded and expose myself to new activities and subjects.
         </p>
     </div>
 
+    <script>
+        function toggleEmail() {
+            const emailDiv = document.getElementById('emailAddress');
+            emailDiv.style.display = emailDiv.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html> 
